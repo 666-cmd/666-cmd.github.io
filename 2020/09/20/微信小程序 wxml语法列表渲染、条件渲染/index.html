@@ -1,128 +1,204 @@
-#article-container {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-#article-container a {
-  color: $theme-link-color;
-}
-#article-container a:hover {
-  text-decoration: underline;
-}
-#article-container img {
-  margin: 0 auto 0.8rem;
-}
-#article-container p {
-  margin: 0 0 0.8rem;
-}
-#article-container iframe {
-  margin: 0 0 1rem;
-}
-#article-container ol,
-#article-container ul {
-  margin-top: 0.4rem;
-}
-#article-container ol p,
-#article-container ul p {
-  margin: 0 0 0.5rem;
-}
-#article-container ol ol,
-#article-container ul ol,
-#article-container ol ul,
-#article-container ul ul {
-  padding-left: 0.5rem;
-}
-#article-container ol li,
-#article-container ul li {
-  position: relative;
-  margin: 0.3rem 0;
-  padding-left: 0.3rem;
-}
-#post img {
-  display: block;
-}
-#post .tag_share .post-meta__tag-list {
-  display: inline-block;
-}
-#post .tag_share .post-meta__tags {
-  display: inline-block;
-  margin: 0.4rem 0.4rem 0.4rem 0;
-  padding: 0 0.6rem;
-  width: fit-content;
-  border: 1px solid $light-blue;
-  border-radius: 0.6rem;
-  color: $light-blue;
-  font-size: 0.85em;
-  transition: all 0.2s ease-in-out;
-}
-#post .tag_share .post-meta__tags:hover {
-  background: $light-blue;
-  color: var(--white);
-}
-#post .tag_share .post_share {
-  display: inline-block;
-  float: right;
-  margin: 0.4rem 0;
-  width: fit-content;
-}
-#post .tag_share .post_share .social-share {
-  font-size: 0.85em;
-}
-#post .tag_share .post_share .social-share .social-share-icon {
-  margin: 0 4px;
-  width: 1.85em;
-  height: 1.85em;
-  font-size: 1.2em;
-  line-height: 1.85em;
-}
-#post .post-copyright {
-  position: relative;
-  margin: 2rem 0 0.5rem;
-  padding: 0.5rem 0.8rem;
-  border: 1px solid var(--light-grey);
-  transition: box-shadow 0.3s ease-in-out;
-}
-#post .post-copyright:before {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  width: 0.8rem;
-  height: 0.8rem;
-  border-radius: 0.8rem;
-  background: $light-blue;
-  content: '';
-}
-#post .post-copyright:after {
-  position: absolute;
-  top: 0.7rem;
-  right: 0.7rem;
-  width: 0.4rem;
-  height: 0.4rem;
-  border-radius: 0.4rem;
-  background: var(--card-bg);
-  content: '';
-}
-#post .post-copyright:hover {
-  box-shadow: 0 0 8px 0 rgba(232,237,250,0.6), 0 2px 4px 0 rgba(232,237,250,0.5);
-}
-#post .post-copyright .post-copyright-meta {
-  color: $light-blue;
-  font-weight: bold;
-}
-#post .post-copyright .post-copyright-info {
-  padding-left: 0.3rem;
-}
-#post .post-copyright .post-copyright-info a {
-  text-decoration: underline;
-  word-break: break-word;
-}
-#post .post-copyright .post-copyright-info a:hover {
-  text-decoration: none;
-}
-#post .post-outdate-notice {
-  position: relative;
-  margin: 0 0 1rem;
-  padding: 0.5em 1.2em;
-  border-radius: 3px;
-  background-color: $noticeOutdate-bg;
-  color: $noticeOutdate-color;
-}
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>微信小程序 wxml语法列表渲染、条件渲染 - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content=" 1.页面层数据绑定：
+1234567891011121314151617181920212223242526Page(&amp;#123; data: &amp;#123;    text: &amp;quot;This,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">微信小程序 wxml语法列表渲染、条件渲染</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">微信小程序 wxml语法列表渲染、条件渲染</h1>
+        <div class="stuff">
+            <span>九月 20, 2020</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <p> 1.页面层数据绑定：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line"> data: &#123;</span><br><span class="line">    text: <span class="string">&quot;This is page data.&quot;</span>,</span><br><span class="line">    classname:<span class="string">&quot;hello&quot;</span>,</span><br><span class="line">    name:<span class="string">&quot;xiaoming&quot;</span>,</span><br><span class="line">    id:<span class="number">1</span>,</span><br><span class="line">    flag:<span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&lt;text&gt;&#123;&#123;text&#125;&#125;&lt;/text&gt;</span><br><span class="line">&lt;view <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;&#123;&#123;classname&#125;&#125;&quot;</span>&gt;&lt;/view&gt;</span><br><span class="line">&lt;view&gt;&#123;&#123;<span class="string">&#x27;abc&#x27;</span>&#125;&#125;&lt;/view&gt;</span><br><span class="line">&lt;view&gt;&#123;&#123;<span class="number">111</span>&#125;&#125;&lt;/view&gt;</span><br><span class="line">&lt;view&gt;&#123;&#123;<span class="number">111</span>*<span class="number">999</span>&#125;&#125;&lt;/view&gt;</span><br><span class="line">&lt;view&gt;&#123;&#123;<span class="string">&quot;hello&quot;</span> + name&#125;&#125;&lt;/view&gt;</span><br><span class="line">&lt;view&gt;&#123;&#123;flag?<span class="string">&quot;真的&quot;</span>:<span class="string">&quot;假的&quot;</span>&#125;&#125;&lt;/view&gt;</span><br><span class="line">&lt;checkbox checked=<span class="string">&quot;&#123;&#123;false&#125;&#125;&quot;</span>&gt;  <span class="comment">//这边不能直接&lt;checkbox checked=&quot;false&quot;&gt;，因为js中只要不是非空字符串，他的值都是true，我们可以通过mustache插值表达式解决该问题</span></span><br><span class="line">&lt;view id=<span class="string">&quot;item-&#123;&#123;id&#125;&#125;&quot;</span>&gt; &lt;/view&gt;</span><br><span class="line">&lt;view hidden=<span class="string">&quot;&#123;&#123;flag ? true : false&#125;&#125;&quot;</span>&gt; Hidden &lt;/view&gt;</span><br><span class="line"></span><br><span class="line">.hello&#123;</span><br><span class="line">  width: <span class="number">100</span>px;</span><br><span class="line">  height: <span class="number">100</span>px;</span><br><span class="line">  background: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  2.wxs语法</p>
+<p>WXS（WeiXin Script）是小程序的一套脚本语言，结合 <code>WXML</code>，可以构建出页面的结构。</p>
+<p>WXS存在的意义就是充当compute/filter这类功能。wxs不支持es6语法。</p>
+<p>WXS 与 JavaScript 是不同的语言，有自己的语法，并不和 JavaScript 一致。</p>
+<p>WXS 代码可以编写在 wxml 文件中的 <code>&lt;wxs&gt;</code> 标签内，或以 <code>.wxs</code> 为后缀名的文件内。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 声明一个wxs模块 : 不支持es6</span><br><span class="line">    需要指定模块的名字 module --&gt;</span><br><span class="line">&lt;wxs module&#x3D;&quot;dateFormat&quot;&gt;</span><br><span class="line">  &#x2F;&#x2F;准备一个时间格式化的方法</span><br><span class="line">  var format &#x3D; function(date)&#123;</span><br><span class="line">      &#x2F;&#x2F;根据时间戳使用小程序提供的getDate()方法得到一个时间</span><br><span class="line">      var time &#x3D; getDate(date);</span><br><span class="line">      var year &#x3D; time.getFullYear();</span><br><span class="line">      var month &#x3D; time.getMonth() + 1;</span><br><span class="line">      var date &#x3D; time.getDate();</span><br><span class="line">      var hour &#x3D; time.getHours();</span><br><span class="line">      var minute &#x3D; time.getMinutes();</span><br><span class="line">      var second &#x3D; time.getSeconds();</span><br><span class="line">      month &#x3D; month &lt; 10 ? &quot;0&quot; + month : month;</span><br><span class="line">      date &#x3D; date &lt; 10 ? &quot;0&quot; + date : date;</span><br><span class="line">      hour &#x3D; hour &lt; 10 ? &quot;0&quot; + hour : hour;</span><br><span class="line">      minute &#x3D; minute &lt; 10 ? &quot;0&quot; + minute : minute;</span><br><span class="line">      second &#x3D; second &lt; 10 ? &quot;0&quot; + second : second;</span><br><span class="line">      return year + &quot;-&quot; + month + &quot;-&quot; + date + &quot; &quot; + hour + &quot;:&quot; + minute + &quot;:&quot; + second;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  var format2 &#x3D; function(msg)&#123;</span><br><span class="line">    var reg &#x3D; getRegExp(&#39;小&#39;, &quot;g&quot;);</span><br><span class="line">    return msg.replace(reg, &quot;大&quot;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  var msg &#x3D; &quot;hello world&quot;;</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F;将外部需要使用的信息导出</span><br><span class="line">  module.exports &#x3D; &#123;</span><br><span class="line">    format : format,</span><br><span class="line">    format2:format2</span><br><span class="line">    msg:msg</span><br><span class="line">  &#125;</span><br><span class="line">&lt;&#x2F;wxs&gt;</span><br><span class="line">&lt;text&gt;&#123;&#123;dateFormat.format(now)&#125;&#125;&lt;&#x2F;text&gt;</span><br><span class="line">&lt;text&gt;&#123;&#123;dateFormat.format2(&quot;小小的&quot;)&#125;&#125;&lt;&#x2F;text&gt;</span><br><span class="line">&lt;text&gt;&#123;&#123;dateFormat.msg&#125;&#125;&lt;&#x2F;text&gt;</span><br></pre></td></tr></table></figure>
+
+<p>3 .wxml语法</p>
+<p>3.1列表渲染</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">    text: <span class="string">&quot;This is page data.&quot;</span>,</span><br><span class="line">    classname:<span class="string">&quot;hello&quot;</span>,</span><br><span class="line">    todos:[</span><br><span class="line">      &#123;</span><br><span class="line">        name:<span class="string">&quot;javascript&quot;</span>,</span><br><span class="line">        completed:<span class="literal">false</span></span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        name: <span class="string">&quot;java&quot;</span>,</span><br><span class="line">        completed: <span class="literal">false</span></span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        name: <span class="string">&quot;c#&quot;</span>,</span><br><span class="line">        completed: <span class="literal">true</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">&lt;!--</span><br><span class="line">  wx:<span class="keyword">for</span>-item=<span class="string">&quot;ele&quot;</span>  给遍历的每一项取别名，默认名字是item</span><br><span class="line">  wx:<span class="keyword">for</span>-index=<span class="string">&quot;idx&quot;</span>  给遍历的每一项序号取别名，默认是index</span><br><span class="line">  --&gt;</span><br><span class="line">  &lt;view wx:<span class="keyword">for</span>=<span class="string">&quot;&#123;&#123;todos&#125;&#125;&quot;</span> wx:<span class="keyword">for</span>-item=<span class="string">&quot;ele&quot;</span> wx:<span class="keyword">for</span>-index=<span class="string">&quot;idx&quot;</span>&gt;</span><br><span class="line">     &lt;text&gt;&#123;&#123;idx&#125;&#125;&lt;/text&gt;</span><br><span class="line">     &lt;text&gt;&#123;&#123;ele.name&#125;&#125;&lt;/text&gt;</span><br><span class="line">     &lt;checkbox checked=<span class="string">&quot;&#123;&#123;ele.completed&#125;&#125;&quot;</span>&gt;&lt;/checkbox&gt;</span><br><span class="line">  &lt;/view&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<h3 id="wx-key-提高列表渲染时排序的效率"><a href="#wx-key-提高列表渲染时排序的效率" class="headerlink" title="wx:key   提高列表渲染时排序的效率"></a>wx:key   提高列表渲染时排序的效率</h3></blockquote>
+<p><code>wx:key</code> 的值以两种形式提供</p>
+<ol>
+<li><p>字符串，代表在 for 循环的 array 中 item 的某个 property，该 property 的值需要是列表中唯一的字符串或数字，且不能动态改变。</p>
+</li>
+<li><p>保留关键字 <code>*this</code> 代表在 for 循环中的 item 本身，这种表示需要 item 本身是一个唯一的字符串或者数字。比如数组[“a”,”b”,”c”]这样的数组就可以wx:key = “*this”</p>
+</li>
+</ol>
+<p>3.2条件渲染</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--wxml--&gt;</span><br><span class="line">&lt;view wx:if&#x3D;&quot;&#123;&#123;view &#x3D;&#x3D; &#39;WEBVIEW&#39;&#125;&#125;&quot;&gt; WEBVIEW &lt;&#x2F;view&gt;</span><br><span class="line">&lt;view wx:elif&#x3D;&quot;&#123;&#123;view &#x3D;&#x3D; &#39;APP&#39;&#125;&#125;&quot;&gt; APP &lt;&#x2F;view&gt;</span><br><span class="line">&lt;view wx:else&#x3D;&quot;&#123;&#123;view &#x3D;&#x3D; &#39;MINA&#39;&#125;&#125;&quot;&gt; MINA &lt;&#x2F;view&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; page.js</span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    view: &#39;MINA&#39;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--条件渲染和for循环结合使用--&gt;</span><br><span class="line">&lt;view wx:for&#x3D;&quot;&#123;&#123;[1,2,3,4,5,6,7,8,9]&#125;&#125;&quot;  wx:for-item&#x3D;&quot;i&quot; &gt;</span><br><span class="line">    &lt;view wx:for&#x3D;&quot;&#123;&#123;[1,2,3,4,5,6,7,8,9]&#125;&#125;&quot;  wx:for-item&#x3D;&quot;j&quot; &gt;</span><br><span class="line">      &lt;view wx:if&#x3D;&quot;&#123;&#123;i&lt;&#x3D;j&#125;&#125;&quot;&gt;</span><br><span class="line">         &#123;&#123;i&#125;&#125;*&#123;&#123;j&#125;&#125;&#x3D;&#123;&#123;i*j&#125;&#125;</span><br><span class="line">      &lt;&#x2F;view&gt;</span><br><span class="line">    &lt;&#x2F;view&gt;</span><br><span class="line">  &lt;&#x2F;view&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--block标签的使用--&gt;</span><br><span class="line">&lt;block wx:if&#x3D;&quot;&#123;&#123;show&#125;&#125;&quot;&gt; </span><br><span class="line">   &lt;view class&#x3D;&quot;content&quot;&gt;</span><br><span class="line">      &lt;text&gt;内容&lt;&#x2F;text&gt;</span><br><span class="line">   &lt;&#x2F;view&gt;</span><br><span class="line">   &lt;view class&#x3D;&quot;content&quot;&gt;</span><br><span class="line">      &lt;text&gt;内容&lt;&#x2F;text&gt;</span><br><span class="line">   &lt;&#x2F;view&gt;</span><br><span class="line">&lt;&#x2F;block&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;block区块标签，不会渲染到页面。当有多个view要切换显示隐藏的时候，可以把多个view嵌套到block标签中</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--hidden属性和wx:if的区别--&gt;</span><br><span class="line"> &lt;view class&#x3D;&quot;content&quot;   wx:if&#x3D;&quot;&#123;&#123;show&#125;&#125;&quot;&gt;</span><br><span class="line">      &lt;text&gt;内容&lt;&#x2F;text&gt;</span><br><span class="line"> &lt;&#x2F;view&gt;</span><br><span class="line"></span><br><span class="line"> &lt;view class&#x3D;&quot;content&quot;   hidden&#x3D;&quot;&#123;&#123;!show&#125;&#125;&quot;&gt;</span><br><span class="line">      &lt;text&gt;内容&lt;&#x2F;text&gt;</span><br><span class="line"> &lt;&#x2F;view&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;wx:if 如果条件未false，则元素不会渲染到页面</span><br><span class="line">&#x2F;&#x2F;hidden: 如果条件为true，则元素会渲染到页面，只不过添加了display:none的属性让元素不显示</span><br><span class="line">&#x2F;&#x2F;频繁切换隐藏显示用hidden，不频繁切换用:if</span><br></pre></td></tr></table></figure>
+
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
