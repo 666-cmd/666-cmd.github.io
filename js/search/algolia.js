@@ -1,9 +1,9 @@
-window.addEventListener('load', () => {
+$(function () {
   const openSearch = () => {
-    document.body.style.cssText = 'width: 100%;overflow: hidden'
-    document.querySelector('#algolia-search .search-dialog').style.display = 'block'
-    document.querySelector('#algolia-search .ais-search-box--input').focus()
-    btf.fadeIn(document.getElementById('search-mask'), 0.5)
+    $('body').css({ width: '100%', overflow: 'hidden' })
+    $('#algolia-search .search-dialog').css('display', 'block')
+    $('.ais-search-box--input').focus()
+    $('#search-mask').fadeIn()
     // shortcut: ESC
     document.addEventListener('keydown', function f (event) {
       if (event.code === 'Escape') {
@@ -14,23 +14,30 @@ window.addEventListener('load', () => {
   }
 
   const closeSearch = () => {
-    document.body.style.cssText = "width: '';overflow: ''"
-    const $searchDialog = document.querySelector('#algolia-search .search-dialog')
-    $searchDialog.style.animation = 'search_close .5s'
-    setTimeout(() => { $searchDialog.style.cssText = "display: none; animation: ''" }, 500)
-    btf.fadeOut(document.getElementById('search-mask'), 0.5)
+    $('body').css({ width: '', overflow: '' })
+    $('#algolia-search .search-dialog').css({
+      animation: 'search_close .5s'
+    })
+
+    setTimeout(function () {
+      $('#algolia-search .search-dialog').css({
+        animation: '',
+        display: 'none'
+      })
+    }, 500)
+
+    $('#search-mask').fadeOut()
   }
 
   const searchClickFn = () => {
-    document.querySelector('#search-button > .search').addEventListener('click', openSearch)
-    document.getElementById('search-mask').addEventListener('click', closeSearch)
-    document.querySelector('#algolia-search .search-close-button').addEventListener('click', closeSearch)
+    $('a.social-icon.search').on('click', openSearch)
+    $('#search-mask, .search-close-button').on('click touchstart', closeSearch)
   }
 
   searchClickFn()
 
   window.addEventListener('pjax:complete', function () {
-    getComputedStyle(document.querySelector('#algolia-search .search-dialog')).display === 'block' && closeSearch()
+    closeSearch()
     searchClickFn()
   })
 
@@ -48,9 +55,9 @@ window.addEventListener('load', () => {
       hitsPerPage: algolia.hits.per_page || 10
     },
     searchFunction: function (helper) {
-      const searchInput = document.querySelector('#algolia-search-input input')
+      const searchInput = $('#algolia-search-input').find('input')
 
-      if (searchInput.value) {
+      if (searchInput.val()) {
         helper.search()
       }
     }
