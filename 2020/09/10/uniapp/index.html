@@ -25,6 +25,8 @@ uni-app中样式学习
     <link rel="alternative" href="atom.xml" title="栏杆" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
     
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
     
 <link rel="stylesheet" href="/css/diaspora.css">
 
@@ -883,7 +885,7 @@ uni-app中样式学习
 <p>javascript</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.将资料中的uni-ui放入到项目components目录下(注意：不要npm install @dcloudio/uni-ui ，这种方式在子组件中无法使用)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2.安装sass-loader</span></span><br><span class="line">npm install node-sass sass-loader@<span class="number">8.0</span><span class="number">.2</span>      重启hubuilderX</span><br><span class="line"></span><br><span class="line"><span class="comment">//3.在页面组件和自定义组件中使用uni-ui</span></span><br><span class="line"><span class="keyword">import</span> uniBadge <span class="keyword">from</span> <span class="string">&quot;@/components/uni-ui/lib/uni-badge/uni-badge.vue&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> uniGrid <span class="keyword">from</span> <span class="string">&quot;@/components/uni-ui/lib/uni-grid/uni-grid.vue&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> uniGridItem <span class="keyword">from</span> <span class="string">&quot;@/components/uni-ui/lib/uni-grid-item/uni-grid-item.vue&quot;</span>;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">    components: &#123;</span><br><span class="line">        uniBadge,</span><br><span class="line">        uniGrid,</span><br><span class="line">        uniGridItem</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;view&gt;</span><br><span class="line">        &lt;uni-badge text=<span class="string">&quot;1&quot;</span>&gt;&lt;/uni-badge&gt;</span><br><span class="line">        &lt;uni-badge text=<span class="string">&quot;2&quot;</span> type=<span class="string">&quot;success&quot;</span>&gt;&lt;/uni-badge&gt;</span><br><span class="line">        &lt;uni-badge text=<span class="string">&quot;3&quot;</span> type=<span class="string">&quot;primary&quot;</span> :inverted=<span class="string">&quot;true&quot;</span>&gt;&lt;/uni-badge&gt;</span><br><span class="line">        &lt;uni-grid :column=<span class="string">&quot;3&quot;</span>&gt;</span><br><span class="line">            &lt;uni-grid-item&gt;</span><br><span class="line">                &lt;text <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;text&quot;</span>&gt;文本&lt;/text&gt;</span><br><span class="line">            &lt;/uni-grid-item&gt;</span><br><span class="line">            &lt;uni-grid-item&gt;</span><br><span class="line">                &lt;text <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;text&quot;</span>&gt;文本&lt;/text&gt;</span><br><span class="line">            &lt;/uni-grid-item&gt;</span><br><span class="line">            &lt;uni-grid-item&gt;</span><br><span class="line">                &lt;text <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;text&quot;</span>&gt;文本&lt;/text&gt;</span><br><span class="line">            &lt;/uni-grid-item&gt;</span><br><span class="line">        &lt;/uni-grid&gt;</span><br><span class="line">    &lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
-            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
                 <source type="audio/mpeg" src="">
             </audio>
             
@@ -902,7 +904,7 @@ uni-app中样式学习
         </div>
         
     <div id='gitalk-container' class="comment link"
-		data-enable='false'
+		data-enable='true'
         data-ae='false'
         data-ci=''
         data-cs=''
@@ -921,6 +923,8 @@ uni-app中样式学习
     </div>
 </div>
 </body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 
 
 <script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
