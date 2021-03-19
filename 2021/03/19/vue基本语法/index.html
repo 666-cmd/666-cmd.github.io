@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>vue基本语法 - 栏杆</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="栏杆,Vue基本语法插值操作MustacheMustache语法:双大括号
+Mustache:胡须/胡子
+html
+12345678910111213141516&amp;lt;div id=&amp;quot;app&amp;,"> 
+    <meta name="author" content="hzq"> 
+    <link rel="alternative" href="atom.xml" title="栏杆" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">栏杆</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">vue基本语法</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">vue基本语法</h1>
+        <div class="stuff">
+            <span>三月 19, 2021</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h1 id="Vue基本语法"><a href="#Vue基本语法" class="headerlink" title="Vue基本语法"></a>Vue基本语法</h1><h3 id="插值操作"><a href="#插值操作" class="headerlink" title="插值操作"></a>插值操作</h3><h4 id="Mustache"><a href="#Mustache" class="headerlink" title="Mustache"></a><code>Mustache</code></h4><p><code>Mustache</code>语法:双大括号</p>
+<p><code>Mustache</code>:胡须/胡子</p>
+<p>html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">        &#123;&#123;message&#125;&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123;firstName+&#x27; &#x27;+lastName&#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123;counter*2&#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">            el: <span class="string">`#app`</span>, <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">                message: <span class="string">&#x27;你好啊&#x27;</span>,</span></span><br><span class="line"><span class="javascript">                firstName: <span class="string">&#x27;Kobe&#x27;</span>,</span></span><br><span class="line"><span class="javascript">                lastName: <span class="string">&#x27;Bryant&#x27;</span>,</span></span><br><span class="line">                counter: 1900</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="v-once指令"><a href="#v-once指令" class="headerlink" title="v-once指令"></a><code>v-once</code>指令</h4><p>只会在第一次显示数据，之后修改并不会改变</p>
+<p>html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h2</span> <span class="attr">v-once</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">            el: <span class="string">`#app`</span>, <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">                message: <span class="string">&#x27;你好啊&#x27;</span></span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="v-html"><a href="#v-html" class="headerlink" title="v-html"></a><code>v-html</code></h4><p>解析字符串，识别a标签，并且能解析<code>href</code>地址</p>
+<p>html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h2</span> <span class="attr">v-html</span>=<span class="string">&quot;url&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">            el: <span class="string">`#app`</span>, <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="handlebars"><span class="xml">                url:&#x27;<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://www.baidu.com&quot;</span>&gt;</span>百度一下<span class="tag">&lt;/<span class="name">a</span>&gt;</span>&#x27;</span></span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="v-text"><a href="#v-text" class="headerlink" title="v-text"></a><code>v-text</code></h4><p>用起来并不灵活，会覆盖后面的内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &lt;h2 v-once&gt;&#123;&#123;message&#125;&#125;,李银河&lt;&#x2F;h2&gt;            &#x2F;&#x2F;你好啊,李银河</span><br><span class="line">        &lt;h2 v-text&#x3D;&quot;message&quot;&gt;,李银河&lt;&#x2F;h2&gt;            &#x2F;&#x2F;你好啊</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;..&#x2F;js&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        let app &#x3D; new Vue(&#123;</span><br><span class="line">            el: &#96;#app&#96;,</span><br><span class="line">            data: &#123;</span><br><span class="line">                message: &#39;你好啊&#39;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="v-pre"><a href="#v-pre" class="headerlink" title="v-pre"></a><code>v-pre</code></h4><p>不解析<code>Mustache</code>语法，将内容原封不动输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &lt;h2 v-pre&gt;&#123;&#123;message&#125;&#125;,李银河&lt;&#x2F;h2&gt;        &#x2F;&#x2F;&#123;&#123;message&#125;&#125;,李银河</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;..&#x2F;js&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        let app &#x3D; new Vue(&#123;</span><br><span class="line">            el: &#96;#app&#96;,</span><br><span class="line">            data: &#123;</span><br><span class="line">                message: &#39;你好啊&#39;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="v-cloak"><a href="#v-cloak" class="headerlink" title="v-cloak"></a><code>v-cloak</code></h4><h4 id="v-bind"><a href="#v-bind" class="headerlink" title="v-bind"></a><code>v-bind</code></h4><p>动态绑定属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &#123;&#123;message&#125;&#125;</span><br><span class="line">        &lt;a v-bind:href&#x3D;&quot;url&quot;&gt;百度一下&lt;&#x2F;a&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;..&#x2F;js&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;let app &#x3D; new Vue(&#123;</span><br><span class="line">            el: &#96;#app&#96;,</span><br><span class="line">            data: &#123;</span><br><span class="line">                message: &#39;你好啊&#39;,</span><br><span class="line">                url:&#39;https:&#x2F;&#x2F;www.baidu.com&#39;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>语法糖（简写）：</p>
+<p><a :href="url">百度一下</a></p>
+<h4 id="v-bind动态绑定class属性"><a href="#v-bind动态绑定class属性" class="headerlink" title="v-bind动态绑定class属性"></a><code>v-bind</code>动态绑定<code>class</code>属性</h4><p>点击按钮切换<code>class</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- css --&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">        .active&#123;</span><br><span class="line">            color: red;</span><br><span class="line">        &#125;</span><br><span class="line">        .line&#123;</span><br><span class="line">            font-size: larger;</span><br><span class="line">        &#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- html --&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &lt;h2 class&#x3D;&quot;title&quot; v-bind:class&#x3D;&quot;&#123;active:isActive,line:isLine&#125;&quot;&gt;&#123;&#123;message&#125;&#125;&lt;&#x2F;h2&gt;</span><br><span class="line">        &lt;button v-on:click&#x3D;&quot;btnClick&quot;&gt;切换&lt;&#x2F;button&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;..&#x2F;js&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;let app &#x3D; new Vue(&#123;</span><br><span class="line">            el: &#96;#app&#96;,</span><br><span class="line">            data: &#123;</span><br><span class="line">                message:&#39;Hello Vuejs&#39;,</span><br><span class="line">                isActive:true,</span><br><span class="line">                isLine:true</span><br><span class="line">            &#125;,</span><br><span class="line">            methods:&#123;</span><br><span class="line">                btnClick:function()&#123;</span><br><span class="line">                    this.isActive&#x3D;!this.isActive,</span><br><span class="line">                    this.isLine&#x3D;!this.isLine</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://i.loli.net/2020/11/05/OAr2TMR5pLj9vPw.png" alt="v-bind绑定class.png"></p>
+<p><strong>v-bind绑定class.png</strong></p>
+<p><img src="https://i.loli.net/2020/11/05/cTLMvb8mFaRqlu5.png" alt="v-bind绑定class2.png"></p>
+<p><strong>v-bind绑定class2.png</strong></p>
+<h5 id="绑定方式一、对象语法"><a href="#绑定方式一、对象语法" class="headerlink" title="绑定方式一、对象语法"></a>绑定方式一、对象语法</h5><p>用法有：</p>
+<p>1、通过一个对象绑定一个类(可以传多个值)，并且和普通类同时存在并不冲突</p>
+<p>html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">&quot;title&quot;</span> <span class="attr">v-bind:class</span>=<span class="string">&quot;&#123;active:isActive,line:isLine&#125;&quot;</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>2、如果用法过于复杂，可以放在一个<code>methods</code>或者<code>computed</code>中</p>
+<p>html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">//hmtl</span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">&quot;title&quot;</span> <span class="attr">v-bind:class</span>=<span class="string">&quot;getClasses()&quot;</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">//js</span><br><span class="line">let app = new Vue(&#123;</span><br><span class="line">            el: `#app`,</span><br><span class="line">            data: &#123;</span><br><span class="line">                message:&#x27;Hello Vuejs&#x27;,</span><br><span class="line">                isActive:true,</span><br><span class="line">                isLine:true</span><br><span class="line">            &#125;,</span><br><span class="line">            methods:&#123;</span><br><span class="line">                btnClick:function()&#123;</span><br><span class="line">                    this.isActive=!this.isActive,</span><br><span class="line">                    this.isLine=!this.isLine</span><br><span class="line">                &#125;,</span><br><span class="line">                getClasses:function()&#123;</span><br><span class="line">                    return &#123;active:this.isActive,line:this.isLine&#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="绑定方式二、数组语法"><a href="#绑定方式二、数组语法" class="headerlink" title="绑定方式二、数组语法"></a>绑定方式二、数组语法</h5><p>html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">&quot;title&quot;</span> <span class="attr">:class</span>=<span class="string">&quot;[&#x27;active&#x27;,&#x27;line&#x27;]&quot;</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>注意：其中<code>active</code>加引号就是字符串，不加引号就是变量</p>
+<h4 id="v-bind绑定style"><a href="#v-bind绑定style" class="headerlink" title="v-bind绑定style"></a>v-<code>bind</code>绑定<code>style</code></h4><h5 id="对象语法"><a href="#对象语法" class="headerlink" title="对象语法"></a>对象语法</h5><p>属性值需要加引号，使之解析成为字符串，不加引号就会解析成为变量,如下50px必须加引号，否则会被当成变量解析</p>
+<p>对象的值可以来自于<code>data</code>中的属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;h2 class&#x3D;&quot;title&quot; :style&#x3D;&quot;&#123;fontSize:&#39;50px&#39;&#125;&quot;&gt;&#123;&#123;message&#125;&#125;&lt;&#x2F;h2&gt;</span><br><span class="line">&lt;h2 class&#x3D;&quot;title&quot; :style&#x3D;&quot;&#123;fontSize:finaSize + &#39;px&#39;,backgroundColor:finaColor&#125;&quot;&gt;&#123;&#123;message&#125;&#125;&lt;&#x2F;h2&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://i.loli.net/2020/11/05/xpUDdeOoZSz6cV3.png" alt="v-bind绑定style.png"></p>
+<p><strong>v-bind绑定style.png</strong></p>
+<h5 id="数组语法"><a href="#数组语法" class="headerlink" title="数组语法"></a>数组语法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;h2 class&#x3D;&quot;title&quot; :style&#x3D;&quot;[baseStyle1 , baseStyle2]&quot;&gt;&#123;&#123;message&#125;&#125;&lt;&#x2F;h2&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">     message:&#39;Hello Vuejs&#39;,</span><br><span class="line">     baseStyle1:&#123;backgroundColor:&#39;red&#39;&#125;,</span><br><span class="line">     baseStyle2:&#123;fontSize:&#39;100px&#39;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>

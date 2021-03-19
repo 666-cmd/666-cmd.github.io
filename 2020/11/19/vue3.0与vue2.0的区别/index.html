@@ -5,12 +5,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>CSS - 栏杆</title>
+    <title>vue3.0 - 栏杆</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="栏杆,css是cascading style sheet；html元素的外观是由样式属性值决定的，可以通过内联样式、内部样式、外部样式三种不同的方式来设置元素的样式属性值，如果一个元素同一个样式属性在多个,"> 
+    <meta name="description" content="栏杆,vue3.0和vue2.0比较vue3.0 的发布与 vue2.0 相比，优势主要体现在：更快、更小、更易维护、更易于原生、让开发者更轻松；
+更快
+　　1、virtual DOM 完全重写，moun,"> 
     <meta name="author" content="hzq"> 
     <link rel="alternative" href="atom.xml" title="栏杆" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -40,7 +42,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
     <div title="播放/暂停" class="iconfont icon-play"></div>
-    <h3 class="subtitle">CSS</h3>
+    <h3 class="subtitle">vue3.0</h3>
     <div class="social">
         <div>
             <div class="share">
@@ -55,44 +57,24 @@
     <div class="section">
         <div class="article">
     <div class='main'>
-        <h1 class="title">CSS</h1>
+        <h1 class="title">vue3.0</h1>
         <div class="stuff">
-            <span>十一月 11, 2020</span>
+            <span>十一月 19, 2020</span>
             
 
         </div>
         <div class="content markdown">
-            <p>css是cascading style sheet；html元素的外观是由样式属性值决定的，可以通过内联样式、内部样式、外部样式三种不同的方式来设置元素的样式属性值，如果一个元素同一个样式属性在多个不同的地方设置了值，最具体的位置样式属性值生效。<br>css定义位置：1、元素的style属性<br>            2、文档的style标签里<br>            3、外部文档<br>#选择器：选择器是用来描述要应用样式的元素，每个html元素都有一个标签名，还可以有class属性，id属性，css选择器里有元素选择器、id选择器、class选择器</p>
-<ol>
-<li>如果一个选择器的名字是一个html标签名，那么这是一个元素选择器，他定义的样式会应用到和他名称相同的html元素上</li>
-<li>id选择器以#开头，作用于id属性和他名称相同的元素</li>
-<li>class选择器以.开头，作用于class属性包含他的名称的元素</li>
-</ol>
-<h1 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h1><p>1.内容：width,height<br>2.内填充：padding,padding-top,padding-right,padding-bottom,padding-left<br>3.边框：border,border-top,border-right,border-bottom,border-left,border-style,border-width,border-color<br>4.外填充：margin,margin-top,margin-right,margin-bottom,margin-left<br>5.标准盒模型<br>6.怪异盒模型（ie）</p>
-<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><ol>
-<li>background-color（背景颜色）</li>
-<li>background-image（背景图片）<br>2.1. background-position（背景定位）<br>2.2. background-repeat（背景重复）<br>2.3. background-size（背景大小）<br>2.4. background-orient</li>
-</ol>
-<h1 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h1><p>1.文本颜色：color<br>2.文本对齐：text-align<br>3.文本修饰：text-decoration<br>4.字符间距：letter-space<br>5.首行缩进：text-indent</p>
-<h1 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h1><p>1.font-family（文本字体）<br>2.font-size（字体大小）<br>3.font-weight字体粗细）<br>4.font-style（字体样式）</p>
-<h1 id="使用”伪类“超链接的样式"><a href="#使用”伪类“超链接的样式" class="headerlink" title="使用”伪类“超链接的样式"></a>使用”伪类“超链接的样式</h1><p>超链接有四种状态：正常、鼠标悬浮、鼠标按下、访问过<br>可以通过伪类来给这四种状态分别设置样式<br>l:link:连接<br>v:visited,访问过<br>h:hover,鼠标悬浮<br>a:active,鼠标按下</p>
-<h1 id="元素的显示方式"><a href="#元素的显示方式" class="headerlink" title="元素的显示方式"></a>元素的显示方式</h1><p>在css中，万物皆块，display的值决定了这个块有不同的特性,同一个元素可以通过设置display的值来在去不同的显示方式中切换<br>display:</p>
-<ol>
-<li>none,不显示</li>
-<li>block,块级元素，单独占有一行，可以设置宽高,h1-h6,p,div,ul,ol,li,dl,dt,dd等的display值都是block</li>
-<li>inline,行内元素，可以和其他行内元素共处一行，不能设置宽高,span,a,img,i,input,select,textarea等都是inline元素</li>
-<li>inline-block,行内块元素，可以和其他行内块元素及行内元素共处一行，可以设置宽高</li>
-<li>flex,弹性盒子</li>
-</ol>
-<h1 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h1><p>1.元素可以浮动<br>2.如果一个元素浮动后，那么对他后面的元素有影响，对前面的元素没有影响<br>3.一个块级元素的宽默认是父元素的宽，高默认是由子元素撑起来的。一个行内元素的宽和高是由他的内容决定。<br>4.一个块级元素的子元素要是浮动了，那么他就不会撑起父元素的高了。</p>
-<h1 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h1><p>在html中，元素的关系是父子关系和兄弟关系。浏览器是按照元素出现的嵌套关系和先后的关系来渲染页面元素。这样的一个渲染的过程就是文档流。<br>一个元素在页面上的位置和他与其他元素的关系有关。有的时候需要将一个元素的位置进行特殊的定位，需要使用position属性。<br>position的值</p>
-<ol>
-<li>static:是默认值，在文档流中就是这个值。</li>
-<li>relative：相对自身原来的位置定位,这个元素没有脱离文档路I，对文档流中其他的元素没有影响</li>
-<li>fixed：相对浏览器窗口来定位,脱离了文档流</li>
-<li>absolute：相对第一个已经定位（position属性值不是static）的祖先元素定位，脱离文档流<br>4.1. 如果没有祖先元素定位，就会相对浏览器窗口定位<br>4.2. 如果有祖先元素使用了定位，就会相对第一个（从内到外）使用了定位的祖先元素定位</li>
-</ol>
-<p>在已经使用了position属性后，使用top,right,bottom,left来完成定位。</p>
+            <h2 id="vue3-0和vue2-0比较"><a href="#vue3-0和vue2-0比较" class="headerlink" title="vue3.0和vue2.0比较"></a>vue3.0和vue2.0比较</h2><p>vue3.0 的发布与 vue2.0 相比，优势主要体现在：更快、更小、更易维护、更易于原生、让开发者更轻松；</p>
+<p><strong>更快</strong></p>
+<p>　　1、virtual DOM 完全重写，mounting &amp; patching 提速 100%；</p>
+<p>　　2、更多编译时 （compile-time）提醒以减少 runtime 开销；</p>
+<p>　　3、基于 Proxy 观察者机制以满足全语言覆盖以及更好的性能；</p>
+<p>　　4、放弃 Object.defineProperty ，使用更快的原生 Proxy；</p>
+<p>　　5、组件实例初始化速度提高 100%;</p>
+<p>　　6、提速一倍/内存使用降低一半；</p>
+<p><strong>更小</strong></p>
+<p>　　1、Tree-shaking 更友好；（<em>tree shaking</em> 是一个术语，通常用于描述移除 JavaScript 上下文中的未引用代码(dead-code)）</p>
+<p>　　2、新的 core runtime：~ 10kb gzipped；</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">

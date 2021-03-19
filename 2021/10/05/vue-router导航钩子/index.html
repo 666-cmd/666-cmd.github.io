@@ -5,12 +5,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Hello World - 栏杆</title>
+    <title>vue-router导航钩子 - 栏杆</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="栏杆,Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any pr,"> 
+    <meta name="description" content="栏杆,1、全局守卫： router.beforeEach  router.beforeResolve  router.afterEach    const router = new VueRouter({,"> 
     <meta name="author" content="hzq"> 
     <link rel="alternative" href="atom.xml" title="栏杆" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -40,7 +40,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
     <div title="播放/暂停" class="iconfont icon-play"></div>
-    <h3 class="subtitle">Hello World</h3>
+    <h3 class="subtitle">vue-router导航钩子</h3>
     <div class="social">
         <div>
             <div class="share">
@@ -55,26 +55,20 @@
     <div class="section">
         <div class="article">
     <div class='main'>
-        <h1 class="title">Hello World</h1>
+        <h1 class="title">vue-router导航钩子</h1>
         <div class="stuff">
-            <span>十月 30, 2020</span>
+            <span>十月 05, 2021</span>
             
 
         </div>
         <div class="content markdown">
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+            <p>1、全局守卫： router.beforeEach  router.beforeResolve  router.afterEach<br>    const router = new VueRouter({ … });<br>    router.beforeEach((to, from, next) =&gt; {<br>        // do someting<br>    });<br>    //to:代表要进入的目标，它是一个路由对象<br>    //from:代表当前正要离开的路由，同样也是一个路由对象<br>    //next:这是一个必须需要调用的方法，而具体的执行效果则依赖 next 方法调用的参数</p>
+<pre><code>//全局后置钩子，后置钩子并没有 next 函数，也不会改变导航本身
+router.afterEach((to, from) =&gt; &#123;
+    // do someting
+&#125;);</code></pre>
+<p>2、路由独享的守卫： beforeEnter<br>    cont router = new VueRouter({<br>        routes: [<br>            {<br>                path: ‘/file’,<br>                component: File,<br>                beforeEnter: (to, from ,next) =&gt; {<br>                    // do someting<br>                }<br>            }<br>        ]<br>    });</p>
+<p>3、组件内的守卫： beforeRouteEnter、beforeRouteUpdate (2.2 新增)、beforeRouteLeave<br>    const File = {<br>        template: <code>&lt;div&gt;This is file&lt;/div&gt;</code>,<br>        beforeRouteEnter(to, from, next) {<br>            // do someting<br>            // 在渲染该组件的对应路由被 confirm 前调用<br>        },<br>        beforeRouteUpdate(to, from, next) {<br>            // do someting<br>            // 在当前路由改变，但是依然渲染该组件是调用<br>        },<br>        beforeRouteLeave(to, from ,next) {<br>            // do someting<br>            // 导航离开该组件的对应路由时被调用<br>        }<br>    }</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
