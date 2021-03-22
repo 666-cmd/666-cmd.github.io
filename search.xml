@@ -73,15 +73,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>react与vue的区别</title>
-    <url>/2021/02/12/react%E4%B8%8Evue%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
-    <content><![CDATA[<p>React与Vue存在很多相似之处，例如他们都是JavaScript的UI框架，专注于创造前端的富应用。不同于早期的JavaScript框架“功能齐全”，Reat与Vue只有框架的骨架，其他的功能如路由、状态管理等是框架分离的组件。</p>
-<p>1.react整体是函数式的思想，把组件设计成纯组件，状态和逻辑通过参数传入，所以在react中，是单向数据流，推崇结合immutable来实现数据不可变。react在setState之后会重新走渲染的流程，如果shouldComponentUpdate返回的是true，就继续渲染，如果返回了false，就不会重新渲染，PureComponent就是重写了shouldComponentUpdate，然后在里面作了props和state的浅层对比。而vue的思想是响应式的，也就是基于是数据可变的，通过对每一个属性建立Watcher来监听，当属性变化的时候，响应式的更新对应的虚拟dom。</p>
-<p>2.react是类式的写法，api很少，而vue是声明式的写法，通过传入各种options，api和参数都很多。所以react结合typescript更容易一起写，vue稍微复杂。</p>
-<p>react整体的思路就是函数式，所以推崇纯组件，数据不可变，单向数据流，当然需要双向的地方也可以做到，比如结合redux-form，而vue是基于可变数据的，支持双向绑定。react组件的扩展一般是通过高阶组件，而vue组件会使用mixin。vue内置了很多功能，而react做的很少，很多都是由社区来完成的，vue追求的是开发的简单，而react更在乎方式是否正确。</p>
-]]></content>
-  </entry>
-  <entry>
     <title>promise</title>
     <url>/2021/01/15/promise/</url>
     <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Promise对象是ES6（ ECMAScript 2015 ）对于异步编程提供的一种解决方案，比传统的	解决方案——回调函数和事件——更合理和更强大。</span><br><span class="line">Promise本身不是异步的，只不过Promise中可以有异步任务，new Promise()的第一个函数参数是立马执行的。</span><br></pre></td></tr></table></figure>
@@ -92,6 +83,15 @@
 <p>2.reject函数的作用是： 将Promise对象的状态从“未完成”变为“失败”（即从 pending 变为 rejected），在异步操作失败时调用，并将异步操作报出的错误，作为参数传递出去。</p>
 <p>Promise对象实例的方法，then 和 catch：<br>1  .then方法： 用于指定调用成功时的回调函数。<br>    then方法返回的是一个新的Promise实例（注意，不是原来那个Promise实例），因此可以采用链式写法，即then方法后面再调用另一个then方法。</p>
 <p>2  .catch方法： 用于指定发生错误时的回调函数。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>react与vue的区别</title>
+    <url>/2021/02/12/react%E4%B8%8Evue%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
+    <content><![CDATA[<p>React与Vue存在很多相似之处，例如他们都是JavaScript的UI框架，专注于创造前端的富应用。不同于早期的JavaScript框架“功能齐全”，Reat与Vue只有框架的骨架，其他的功能如路由、状态管理等是框架分离的组件。</p>
+<p>1.react整体是函数式的思想，把组件设计成纯组件，状态和逻辑通过参数传入，所以在react中，是单向数据流，推崇结合immutable来实现数据不可变。react在setState之后会重新走渲染的流程，如果shouldComponentUpdate返回的是true，就继续渲染，如果返回了false，就不会重新渲染，PureComponent就是重写了shouldComponentUpdate，然后在里面作了props和state的浅层对比。而vue的思想是响应式的，也就是基于是数据可变的，通过对每一个属性建立Watcher来监听，当属性变化的时候，响应式的更新对应的虚拟dom。</p>
+<p>2.react是类式的写法，api很少，而vue是声明式的写法，通过传入各种options，api和参数都很多。所以react结合typescript更容易一起写，vue稍微复杂。</p>
+<p>react整体的思路就是函数式，所以推崇纯组件，数据不可变，单向数据流，当然需要双向的地方也可以做到，比如结合redux-form，而vue是基于可变数据的，支持双向绑定。react组件的扩展一般是通过高阶组件，而vue组件会使用mixin。vue内置了很多功能，而react做的很少，很多都是由社区来完成的，vue追求的是开发的简单，而react更在乎方式是否正确。</p>
 ]]></content>
   </entry>
   <entry>
@@ -221,13 +221,8 @@ router.afterEach((to, from) =&gt; &#123;
   </entry>
   <entry>
     <title>vue基本语法</title>
-    <url>/2021/03/19/vue%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="Vue基本语法"><a href="#Vue基本语法" class="headerlink" title="Vue基本语法"></a>Vue基本语法</h1><h3 id="插值操作"><a href="#插值操作" class="headerlink" title="插值操作"></a>插值操作</h3><h4 id="Mustache"><a href="#Mustache" class="headerlink" title="Mustache"></a><code>Mustache</code></h4><p><code>Mustache</code>语法:双大括号</p>
-<p><code>Mustache</code>:胡须/胡子</p>
-<p>html</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">        &#123;&#123;message&#125;&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123;firstName+&#x27; &#x27;+lastName&#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123;counter*2&#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">            el: <span class="string">`#app`</span>, <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">                message: <span class="string">&#x27;你好啊&#x27;</span>,</span></span><br><span class="line"><span class="javascript">                firstName: <span class="string">&#x27;Kobe&#x27;</span>,</span></span><br><span class="line"><span class="javascript">                lastName: <span class="string">&#x27;Bryant&#x27;</span>,</span></span><br><span class="line">                counter: 1900</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="v-once指令"><a href="#v-once指令" class="headerlink" title="v-once指令"></a><code>v-once</code>指令</h4><p>只会在第一次显示数据，之后修改并不会改变</p>
+    <url>/2020/03/19/vue%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="Vue基本语法"><a href="#Vue基本语法" class="headerlink" title="Vue基本语法"></a>Vue基本语法</h1><h4 id="v-once指令"><a href="#v-once指令" class="headerlink" title="v-once指令"></a><code>v-once</code>指令</h4><p>只会在第一次显示数据，之后修改并不会改变</p>
 <p>html</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h2</span> <span class="attr">v-once</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">            el: <span class="string">`#app`</span>, <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">                message: <span class="string">&#x27;你好啊&#x27;</span></span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 

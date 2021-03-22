@@ -10,10 +10,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="栏杆,Vue基本语法插值操作MustacheMustache语法:双大括号
-Mustache:胡须/胡子
+    <meta name="description" content="栏杆,Vue基本语法v-once指令只会在第一次显示数据，之后修改并不会改变
 html
-12345678910111213141516&amp;lt;div id=&amp;quot;app&amp;,"> 
+1234567891011&amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt;        &amp;lt;h2 ,"> 
     <meta name="author" content="hzq"> 
     <link rel="alternative" href="atom.xml" title="栏杆" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -60,17 +59,12 @@ html
     <div class='main'>
         <h1 class="title">vue基本语法</h1>
         <div class="stuff">
-            <span>三月 19, 2021</span>
+            <span>三月 19, 2020</span>
             
 
         </div>
         <div class="content markdown">
-            <h1 id="Vue基本语法"><a href="#Vue基本语法" class="headerlink" title="Vue基本语法"></a>Vue基本语法</h1><h3 id="插值操作"><a href="#插值操作" class="headerlink" title="插值操作"></a>插值操作</h3><h4 id="Mustache"><a href="#Mustache" class="headerlink" title="Mustache"></a><code>Mustache</code></h4><p><code>Mustache</code>语法:双大括号</p>
-<p><code>Mustache</code>:胡须/胡子</p>
-<p>html</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">        &#123;&#123;message&#125;&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123;firstName+&#x27; &#x27;+lastName&#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123;counter*2&#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">            el: <span class="string">`#app`</span>, <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">                message: <span class="string">&#x27;你好啊&#x27;</span>,</span></span><br><span class="line"><span class="javascript">                firstName: <span class="string">&#x27;Kobe&#x27;</span>,</span></span><br><span class="line"><span class="javascript">                lastName: <span class="string">&#x27;Bryant&#x27;</span>,</span></span><br><span class="line">                counter: 1900</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="v-once指令"><a href="#v-once指令" class="headerlink" title="v-once指令"></a><code>v-once</code>指令</h4><p>只会在第一次显示数据，之后修改并不会改变</p>
+            <h1 id="Vue基本语法"><a href="#Vue基本语法" class="headerlink" title="Vue基本语法"></a>Vue基本语法</h1><h4 id="v-once指令"><a href="#v-once指令" class="headerlink" title="v-once指令"></a><code>v-once</code>指令</h4><p>只会在第一次显示数据，之后修改并不会改变</p>
 <p>html</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h2</span> <span class="attr">v-once</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">            el: <span class="string">`#app`</span>, <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">                message: <span class="string">&#x27;你好啊&#x27;</span></span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
